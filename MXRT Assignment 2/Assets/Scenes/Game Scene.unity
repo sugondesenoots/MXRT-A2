@@ -359,13 +359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85579fc110da42d4c90095c8191ea498, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEvent: {fileID: 11400000, guid: c35ef808d6f772143a2cfa8584c439fd, type: 2}
-  crystal: {fileID: 892098934}
-  arCamera: {fileID: 939495527}
-  item:
-    name: Crystal
-    count: 1
-  _inventory: {fileID: 1219714365}
+  inventory: {fileID: 1219714367}
 --- !u!1001 &918420008
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -476,22 +470,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2512387470528047719, guid: 48cb3fb68c91eb94999fd99957eb0cae,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1219714361}
-    - targetCorrespondingSourceObject: {fileID: 2512387470528047719, guid: 48cb3fb68c91eb94999fd99957eb0cae,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1219714363}
     - targetCorrespondingSourceObject: {fileID: 2512387470528047719, guid: 48cb3fb68c91eb94999fd99957eb0cae,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1219714365}
+      addedObject: {fileID: 1219714367}
   m_SourcePrefab: {fileID: 100100000, guid: 48cb3fb68c91eb94999fd99957eb0cae, type: 3}
---- !u!20 &939495527 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 2512387469002778331, guid: 48cb3fb68c91eb94999fd99957eb0cae,
-    type: 3}
-  m_PrefabInstance: {fileID: 918420008}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1152760162
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,54 +583,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 918420008}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1219714357 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2512387470528047718, guid: 48cb3fb68c91eb94999fd99957eb0cae,
-    type: 3}
-  m_PrefabInstance: {fileID: 918420008}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1219714355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa17d122634046b4a8e23048891fafc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1219714360 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2512387470528047739, guid: 48cb3fb68c91eb94999fd99957eb0cae,
-    type: 3}
-  m_PrefabInstance: {fileID: 918420008}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1219714355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0cb9aa70a22847b5925ee5f067c10a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1219714361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1219714355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0b98fd02f4552a429b6e57987f76efb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_XROrigin: {fileID: 1219714360}
-  m_RaycastManager: {fileID: 1219714357}
-  m_InputActionReferences: {fileID: 11400000, guid: 0f9783f7fb6ccf94c8b28aac7b6afcc0,
-    type: 2}
-  m_ARRaycastHitEvent: {fileID: 11400000, guid: c35ef808d6f772143a2cfa8584c439fd,
-    type: 2}
-  m_Camera: {fileID: 939495527}
-  m_TrackableType: 1
-  m_Raycaster: {fileID: 1152760163}
-  m_EventSystem: {fileID: 1954468642}
-  canRayCastAR: 1
-  canRayCastScene: 1
 --- !u!114 &1219714363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -702,7 +638,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
   m_ARSessionOrigin: {fileID: 0}
---- !u!114 &1219714365
+--- !u!114 &1219714367
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -833,13 +769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85579fc110da42d4c90095c8191ea498, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEvent: {fileID: 11400000, guid: c35ef808d6f772143a2cfa8584c439fd, type: 2}
-  crystal: {fileID: 1435758337}
-  arCamera: {fileID: 939495527}
-  item:
-    name: Crystal
-    count: 1
-  _inventory: {fileID: 1219714365}
+  inventory: {fileID: 1219714367}
 --- !u!1001 &1550040104
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1175,13 +1105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85579fc110da42d4c90095c8191ea498, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEvent: {fileID: 11400000, guid: c35ef808d6f772143a2cfa8584c439fd, type: 2}
-  crystal: {fileID: 2067944228}
-  arCamera: {fileID: 939495527}
-  item:
-    name: Crystal
-    count: 1
-  _inventory: {fileID: 1219714365}
+  inventory: {fileID: 1219714367}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -1,13 +1,12 @@
 [System.Serializable]
-
 public class Item
 {
     public string name;
     public int count;
 
-    public Item(string itemName, int itemCount)
+    public Item(string name, int count)
     {
-        name = itemName;
-        count = itemCount;
+        this.name = name;
+        this.count = count;
     }
 }
