@@ -12,7 +12,7 @@ public class Collection : MonoBehaviour
     {
         //Binds for input action for tap
         tapAction = new InputAction(binding: "<Mouse>/leftButton");
-        tapAction.AddBinding("<Touchscreen>/primaryTouch/tap");
+        tapAction.AddBinding("<Touchscreen>/primaryTouch/press");
         tapAction.performed += OnTap;
         tapAction.Enable();
 

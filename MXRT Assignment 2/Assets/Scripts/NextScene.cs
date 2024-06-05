@@ -16,5 +16,7 @@ public class NextScene : MonoBehaviour
     {
         SceneManager.LoadScene(1);
         nextSceneBtn.onClick.RemoveAllListeners();
-    }
+    } 
+     
+    //Simple script to handle going into the next script using the button in the Start Screen
 }

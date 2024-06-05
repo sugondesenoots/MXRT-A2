@@ -14,6 +14,7 @@ public class NavigationArrow : MonoBehaviour
 
     private bool arrowActive = false;
     public float verticalOffset = 0.5f; 
+    private bool reachedDes = false;
 
     void Start()
     {
@@ -25,6 +26,14 @@ public class NavigationArrow : MonoBehaviour
         if (xrOrigin != null)
         {
             arCamera = xrOrigin.Camera;
+        }
+    }
+
+    void Update()
+    { 
+        if (!reachedDes) //Ensures the function is only called once
+        {
+            CheckForDestination();
         }
     }
 
@@ -44,7 +53,7 @@ public class NavigationArrow : MonoBehaviour
         }
     }
 
-    bool ShouldActivateArrow()
+    public bool ShouldActivateArrow()
     {
         //Checks if the crystal count is 3
         return GetCrystalCount() == 3;
@@ -82,12 +91,12 @@ public class NavigationArrow : MonoBehaviour
             arrowInstance.transform.rotation = Quaternion.LookRotation(direction);
 
             //Rotates the arrow to make it flat and point straight
-            arrowInstance.transform.Rotate(90, 45, 0); 
+            arrowInstance.transform.Rotate(90, 60, 0); 
         }
     }
      
     //Checks for the crystal count
-    int GetCrystalCount()
+    public int GetCrystalCount()
     {
         int crystalCount = 0;
 
@@ -100,5 +109,23 @@ public class NavigationArrow : MonoBehaviour
         }
 
         return crystalCount;
+    }
+
+    void CheckForDestination()
+    {  
+        RaycastHit hit;
+
+        //Performs a raycast from the AR camera to the arrow's forward direction
+        if (Physics.Raycast(arCamera.transform.position, arCamera.transform.forward, out hit, 2))
+        {
+            //Checks for the destination object
+            if (hit.collider.CompareTag("Destination"))
+            {
+                Destroy(arrowInstance); 
+                 
+                reachedDes = true;
+                Debug.Log("Destination reached!");
+            }
+        }
     }
 }
