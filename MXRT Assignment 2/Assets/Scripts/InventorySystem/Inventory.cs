@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,37 +19,36 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void AddItem(Item itemToAdd)
+    public void AddItem(string itemName)
     {
-        Item existingItem = items.Find(i => i.name == itemToAdd.name);
+        Item existingItem = items.Find(i => i.name == itemName);
 
         if (existingItem != null)
         {
-            existingItem.count += itemToAdd.count;
+            existingItem.count += 1;
         }
         else
         {
-            Item newItem = new Item(itemToAdd.name, itemToAdd.count);
-            items.Add(newItem);
+            items.Add(new Item(itemName, 1));
         }
 
-        Debug.Log(itemToAdd.count + " " + itemToAdd.name + " added to inventory");
+        Debug.Log("1 " + itemName + " added to inventory");
     }
 
-    public void RemoveItem(Item itemToRemove)
+    public void RemoveItem(string itemName)
     {
-        Item existingItem = items.Find(i => i.name == itemToRemove.name);
+        Item existingItem = items.Find(i => i.name == itemName);
 
         if (existingItem != null)
         {
-            existingItem.count -= itemToRemove.count;
+            existingItem.count -= 1;
 
             if (existingItem.count <= 0)
             {
                 items.Remove(existingItem);
             }
 
-            Debug.Log(itemToRemove.count + " " + itemToRemove.name + " removed from inventory");
+            Debug.Log("1 " + itemName + " removed from inventory");
         }
     }
 }
